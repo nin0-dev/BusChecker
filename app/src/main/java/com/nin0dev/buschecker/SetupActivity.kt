@@ -1,21 +1,25 @@
 package com.nin0dev.buschecker
 
+import android.app.Activity
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.color.DynamicColors
 import java.security.AccessController.getContext
+import java.util.jar.Manifest
 
 class SetupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         DynamicColors.applyIfAvailable(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setup)
-
+        buttons()
         startImageTint()
     }
     fun startImageTint()
@@ -79,5 +83,26 @@ class SetupActivity : AppCompatActivity() {
     {
         supportActionBar?.setTitle(title)
         supportActionBar?.setSubtitle(subtitle)
+    }
+    fun buttons()
+    {
+        val notificationsButton = findViewById<Button>(R.id.grantNotificationsButton)
+        notificationsButton.setOnClickListener {
+            ActivityCompat.requestPermissions(this,
+                arrayOf("android.permission.POST_NOTIFICATIONS"), 1
+            )
+
+        }
+        val smsButton = findViewById<Button>(R.id.grantSMSButton)
+        smsButton.setOnClickListener {
+            ActivityCompat.requestPermissions(this,
+                arrayOf(android.Manifest.permission.SEND_SMS), 1
+            )
+
+        }
+    }
+    fun components()
+    {
+
     }
 }
