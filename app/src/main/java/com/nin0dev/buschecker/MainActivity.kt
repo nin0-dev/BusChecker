@@ -11,5 +11,6 @@ class MainActivity : AppCompatActivity() {
         // Run setup activity, thanks!
         val i = Intent(this, SetupActivity::class.java)
         startActivity(i)
+        finish()
     }
 }
