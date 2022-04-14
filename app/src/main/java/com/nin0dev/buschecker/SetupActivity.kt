@@ -1,6 +1,7 @@
 package com.nin0dev.buschecker
 
 import android.app.Activity
+import android.content.pm.PackageManager
 import android.content.pm.PackageManager.PERMISSION_DENIED
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.content.res.Configuration
@@ -11,6 +12,8 @@ import android.view.View
 import android.view.View.GONE
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -95,7 +98,11 @@ class SetupActivity : AppCompatActivity() {
     {
         val startButton = findViewById<Button>(R.id.startButton)
         startButton.setOnClickListener {
-            switchScreens(findViewById(R.id.start), findViewById(R.id.permissions), "Permissions")
+            switchScreens(findViewById(R.id.start), findViewById(R.id.disclaimer), "Warning")
+        }
+        val notResponsibleButton = findViewById<Button>(R.id.notResponsibleButton)
+        notResponsibleButton.setOnClickListener {
+            switchScreens(findViewById(R.id.disclaimer), findViewById(R.id.permissions), "Permissions")
         }
         val notificationsButton = findViewById<Button>(R.id.grantNotificationsButton)
         notificationsButton.setOnClickListener {
@@ -128,14 +135,11 @@ class SetupActivity : AppCompatActivity() {
             }
             if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PERMISSION_DENIED)
             {
-                // Permission denied
-
                 smsButton.text = "Grant"
-                //return@setOnClickListener
             }
-
+            }
         }
-    }
+
     fun components()
     {
         if(Build.VERSION.PREVIEW_SDK_INT == 0)
