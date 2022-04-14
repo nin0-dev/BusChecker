@@ -10,7 +10,7 @@
         android:id="@+id/permissions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
+        android:visibility="gone"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="105dp">
 
@@ -34,6 +34,7 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/notificationsCard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -159,8 +160,7 @@
                             android:layout_gravity="bottom|end"
                             android:layout_marginEnd="13dp"
                             android:layout_marginBottom="5dp"
-                            android:enabled="false"
-                            android:text="Permissions not granted"
+                            android:text="Continue"
                             app:icon="@drawable/ic_baseline_arrow_forward_24" />
 
                     </TableRow>
@@ -176,7 +176,7 @@
         android:id="@+id/start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
