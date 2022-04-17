@@ -1,26 +1,21 @@
 package com.nin0dev.buschecker
 
-import android.app.Activity
-import android.content.pm.PackageManager
 import android.content.pm.PackageManager.PERMISSION_DENIED
 import android.content.pm.PackageManager.PERMISSION_GRANTED
 import android.content.res.Configuration
-import android.opengl.Visibility
 import android.os.Build
 import android.os.Bundle
+import android.telephony.SmsManager
 import android.view.View
 import android.view.View.GONE
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.color.DynamicColors
-import java.security.AccessController.getContext
-import java.util.jar.Manifest
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class SetupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,8 +132,46 @@ class SetupActivity : AppCompatActivity() {
             {
                 smsButton.text = "Grant"
             }
+        }
+        val continueButton = findViewById<Button>(R.id.continueButton)
+        continueButton.setOnClickListener {
+            if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PERMISSION_GRANTED)
+            {
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("Warning")
+                    .setMessage("You will see a popup saying that BusChecker sending a SMS to 52736 may cause charges. Click on \"Remember my choice\" and on \"Always Allow\".")
+                    .setPositiveButton("OK") { dialog, which ->
+                        val smgr: SmsManager = SmsManager.getDefault()
+                        smgr.sendTextMessage(
+                            "52786",
+                            null,
+                            "E",
+                            null,
+                            null
+                        )
+                        MaterialAlertDialogBuilder(this)
+                            .setTitle("Info")
+                            .setMessage("You should receive soon a SMS saying that \"your language is now English\". Click on it, and block the number. If you don't know how to do it, search on Google \"Block SMS conversation [device model]\".")
+                            .setPositiveButton("OK") { dialog, which ->
+
+                            }
+                            .show()
+                    }
+                    .show()
+
+            }
+            else
+            {
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("Permissions not granted")
+                    .setMessage("You must grant SMS permission to BusChecker to continue.")
+                    .setPositiveButton("OK") { dialog, which ->
+
+                    }
+                    .show()
             }
         }
+    }
 
     fun components()
     {
