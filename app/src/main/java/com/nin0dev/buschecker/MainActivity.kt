@@ -4,10 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.telephony.SmsManager
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import com.google.android.material.color.DynamicColors
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +27,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
         navBar()
+        buttons()
+    }
+    fun buttons()
+    {
+        val quickCheckButton = findViewById<Button>(R.id.quickcheck_button)
+        quickCheckButton.setOnClickListener {
+            val textView = findViewById<EditText>(R.id.quicksearch_field)
+            if(textView.text.isNullOrBlank())
+            {
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("Error")
+                    .setMessage("Looks like you haven't put anything in the quick search text field.")
+                    .setPositiveButton("OK") { dialog, which ->
+
+                    }
+                    .show()
+                return@setOnClickListener
+            }
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
+            textView.setText("")
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
     }
     fun navBar()
     {
