@@ -23,13 +23,28 @@
                 android:fitsSystemWindows="true"
                 android:gravity="top"
                 android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Enter stop code to get time"
+                    app:endIconCheckable="false"
+                    app:errorEnabled="false">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
+                </com.google.android.material.textfield.TextInputLayout>
 
 
             </LinearLayout>
 
         </ScrollView>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
