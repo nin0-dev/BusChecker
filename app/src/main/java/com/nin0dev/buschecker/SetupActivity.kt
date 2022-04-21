@@ -122,22 +122,22 @@ class SetupActivity : AppCompatActivity() {
         val smsButton = findViewById<Button>(R.id.grantSMSButton)
         smsButton.setOnClickListener {
             ActivityCompat.requestPermissions(this,
-                arrayOf("android.permission.SEND_SMS"), 1
+                arrayOf("android.permission.RECEIVE_SMS", "android.permission.SEND_SMS"), 1
             )
-            if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PERMISSION_GRANTED)
+            if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PERMISSION_GRANTED)
             {
                 // Permission granted
                 smsButton.isEnabled = false
                 smsButton.text = "Granted"
             }
-            if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PERMISSION_DENIED)
+            if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PERMISSION_DENIED)
             {
                 smsButton.text = "Grant"
             }
         }
         val continueButton = findViewById<Button>(R.id.continueButton)
         continueButton.setOnClickListener {
-            if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PERMISSION_GRANTED)
+            if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PERMISSION_GRANTED)
             {
                 MaterialAlertDialogBuilder(this)
                     .setTitle("Warning")
