@@ -17,6 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusChecker"
         tools:targetApi="32">
+        <activity
+            android:name=".ShowDIalogActivity"
+            android:theme="@style/Theme.Transparent"
+            android:exported="true" />
+
         <receiver
             android:name=".SMSReceiver"
             android:enabled="true"
