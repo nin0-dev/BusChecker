@@ -23,22 +23,57 @@
                 android:fitsSystemWindows="true"
                 android:gravity="top"
                 android:orientation="vertical">
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="fill_parent"
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginVertical="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:hint="Enter stop code to get time"
-                    app:endIconCheckable="false"
-                    app:errorEnabled="false">
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/Widget.Material3.CardView.Filled">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/freeukraine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="30dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Quick search"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="25dp"
+                            android:hint="Enter stop code to get time"
+                            app:endIconCheckable="false"
+                            app:errorEnabled="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/quicksearch_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <Button
+                            android:id="@+id/quickcheck_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="Check" />
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
 
 
             </LinearLayout>
