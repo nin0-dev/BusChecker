@@ -11,11 +11,14 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
+import kotlin.streams.asSequence
 
 
 class SMSReceiver : BroadcastReceiver() {
 
     val pdu_type = "pdus"
+
+
     override fun onReceive(context: Context, intent: Intent) {
         val bundle = intent.extras
         val msgs: Array<SmsMessage?>
@@ -28,12 +31,57 @@ class SMSReceiver : BroadcastReceiver() {
             for (i in msgs.indices) {
                 msgs[i] = SmsMessage.createFromPdu(pdus[i] as ByteArray, format)
                 val address = msgs[i]?.originatingAddress
-                val text = msgs[i]?.messageBody
+                val text : CharSequence? = msgs[i]?.messageBody
                 if(address != "52786")
                 {
                     return
                 }
 
+                val regexTimeInfo = Regex("\\(\\d\\d\\/\\d\\d\\,\\ \\d\\dh\\d\\d\\)")
+                val regexInvalid = Regex("Invalid entry")
+                val regexInvalid2 = Regex("Invalid stop number")
+                val regexInvalidRoute = Regex("doesn\\'t correspond with stop")
+                val regexApproximateMatch = Regex("Several bus routes are available for stop")
+                if(regexTimeInfo.containsMatchIn(text!!))
+                {
+                    val i = Intent(context, ShowDIalogActivity::class.java)
+                    i.putExtra("title", "Matched exact time")
+                    i.putExtra("text", text)
+                    i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
+                }
+                if(regexInvalid.containsMatchIn(text!!))
+                {
+                    val i = Intent(context, ShowDIalogActivity::class.java)
+                    i.putExtra("title", "Matched invalid input")
+                    i.putExtra("text", text)
+                    i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
+                }
+                if(regexInvalid2.containsMatchIn(text!!))
+                {
+                    val i = Intent(context, ShowDIalogActivity::class.java)
+                    i.putExtra("title", "Matched non-existing stop")
+                    i.putExtra("text", text)
+                    i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
+                }
+                if(regexInvalidRoute.containsMatchIn(text!!))
+                {
+                    val i = Intent(context, ShowDIalogActivity::class.java)
+                    i.putExtra("title", "Matched invalid route")
+                    i.putExtra("text", text)
+                    i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
+                }
+                if(regexApproximateMatch.containsMatchIn(text!!))
+                {
+                    val i = Intent(context, ShowDIalogActivity::class.java)
+                    i.putExtra("title", "Matched several routes")
+                    i.putExtra("text", text)
+                    i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                    ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
+                }
             }
         }
     }
