@@ -3,11 +3,10 @@ package com.nin0dev.buschecker
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.navigation.NavigationBarView
 
@@ -17,12 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val sp = getSharedPreferences("e", Context.MODE_PRIVATE)
-        if(ContextCompat.checkSelfPermission(this, "android.permission.SEND_SMS") == PackageManager.PERMISSION_DENIED)
+        if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PackageManager.PERMISSION_DENIED)
         {
             val i = Intent(this, SetupActivity::class.java)
             startActivity(i)
         }
-
         navBar()
     }
     fun navBar()
