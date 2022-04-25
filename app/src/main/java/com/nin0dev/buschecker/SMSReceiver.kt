@@ -38,10 +38,8 @@ class SMSReceiver : BroadcastReceiver() {
                 {
                     return
                 }
-                Log.d("e", msgs[i]?.messageBody!!)
-
             }
-            Log.e("New full message", text)
+            Log.d("New full message", text)
             val regexTimeInfo = Regex("\\(\\d\\d\\/\\d\\d\\,\\ \\d\\dh\\d\\d\\)")
             val regexInvalid = Regex("Invalid entry")
             val regexInvalid2 = Regex("Invalid stop number")
@@ -49,9 +47,14 @@ class SMSReceiver : BroadcastReceiver() {
             val regexApproximateMatch = Regex("Several bus routes are available for stop")
             if(regexTimeInfo.containsMatchIn(text!!))
             {
+                var stopNumber = text.substring(5, 11)
+                var busTimes = text.substringAfter(":")
+                busTimes = busTimes.removeRange(0,1)
+                busTimes = busTimes.substringBefore("\n")
+                busTimes = busTimes.replace("*", "")
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Matched exact time")
-                i.putExtra("text", text)
+                i.putExtra("title", "Bus times for $stopNumber")
+                i.putExtra("text", busTimes)
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
