@@ -61,24 +61,24 @@ class SMSReceiver : BroadcastReceiver() {
             if(regexInvalid.containsMatchIn(text!!))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Matched invalid input")
-                i.putExtra("text", text)
+                i.putExtra("title", "Invalid stop code")
+                i.putExtra("text", "Make sure that you entered the right stop code, and try again.")
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
             if(regexInvalid2.containsMatchIn(text!!))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Matched non-existing stop")
-                i.putExtra("text", text)
+                i.putExtra("title", "Invalid stop code")
+                i.putExtra("text", "Make sure that you entered the right stop code, and try again.")
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
             if(regexInvalidRoute.containsMatchIn(text!!))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Matched invalid route")
-                i.putExtra("text", text)
+                i.putExtra("title", "Invalid route number")
+                i.putExtra("text", "Make sure that you entered the right route number, and try again.")
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
