@@ -3,8 +3,10 @@ package com.nin0dev.buschecker
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.telephony.SmsManager
+import android.view.View.GONE
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity() {
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
             textView.setText("")
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            recreate()
         }
     }
     fun navBar()
