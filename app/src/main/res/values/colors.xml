@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ic_launcher_foreground">#FF202020</color>
     <color name="ic_launcher_background">#FFBB86FC</color>
-    <color name="fullscreendialog_background">#D8FFFFFF</color>
+    <color name="fullscreendialog_background">#E9FFFFFF</color>
 </resources>
