@@ -1,5 +1,6 @@
 package com.nin0dev.buschecker
 
+import android.app.AlertDialog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -8,10 +9,13 @@ import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.os.Build
 import android.telephony.SmsMessage
 import android.util.Log
-import android.widget.Toast
+import android.view.WindowManager
+import android.widget.EditText
+import android.widget.LinearLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
-import kotlin.streams.asSequence
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.internal.ContextUtils.getActivity
 
 
 class SMSReceiver : BroadcastReceiver() {
@@ -66,7 +70,7 @@ class SMSReceiver : BroadcastReceiver() {
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
-            if(regexInvalid2.containsMatchIn(text!!))
+            if(regexInvalid2.containsMatchIn(text))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
                 i.putExtra("title", "Invalid stop code")
@@ -74,7 +78,7 @@ class SMSReceiver : BroadcastReceiver() {
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
-            if(regexInvalidRoute.containsMatchIn(text!!))
+            if(regexInvalidRoute.containsMatchIn(text))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
                 i.putExtra("title", "Invalid route number")
@@ -82,13 +86,20 @@ class SMSReceiver : BroadcastReceiver() {
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
-            if(regexApproximateMatch.containsMatchIn(text!!))
+            if(regexApproximateMatch.containsMatchIn(text))
             {
-                val intent = Intent(context, ShowDIalogActivity::class.java)
-                intent.putExtra("title", "Matched several routes")
-                intent.putExtra("text", text)
-                intent.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
-                ActivityCompat.startActivity(context, intent, ActivityOptionsCompat.makeBasic().toBundle())
+                var stopNumber = text.substringBefore(".")
+                stopNumber = stopNumber.substring(stopNumber.length - 5)
+                var routeNumbers = text.substringAfter(":")
+                routeNumbers = routeNumbers.substringBefore(".")
+                routeNumbers.removeRange(0, 1)
+                Log.d("Bus stop", stopNumber)
+                Log.d("Route numbers", routeNumbers)
+                val i = Intent(context, MultiChoiceDialog::class.java)
+                i.putExtra("stop", stopNumber)
+                i.putExtra("routes", routeNumbers)
+                i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
         }
 
