@@ -18,9 +18,13 @@
         android:theme="@style/Theme.BusChecker"
         tools:targetApi="32">
         <activity
-            android:name=".ShowDIalogActivity"
+            android:name=".MultiChoiceDialog"
             android:theme="@style/Theme.Transparent"
             android:exported="true" />
+        <activity
+            android:name=".ShowDIalogActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
 
         <receiver
             android:name=".SMSReceiver"
