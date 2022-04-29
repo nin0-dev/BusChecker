@@ -45,6 +45,7 @@
                             android:layout_marginBottom="15dp"
                             android:text="Quick search"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="fill_parent"
@@ -53,7 +54,7 @@
                             android:layout_marginTop="7dp"
                             android:layout_marginBottom="25dp"
 
-                            android:hint="Enter stop code to get time"
+                            android:hint="Stop code"
                             app:endIconCheckable="false"
                             app:errorEnabled="false">
 
