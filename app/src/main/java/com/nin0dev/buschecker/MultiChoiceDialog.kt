@@ -30,6 +30,11 @@ class MultiChoiceDialog : AppCompatActivity() {
                 textFieldLayout.error = "Route doesn't exist"
                 textField.setText("")
             }
+            else if(textField.text.isEmpty())
+            {
+                textFieldLayout.error = "Route doesn't exist"
+                textField.setText("")
+            }
             else
             {
                 textFieldLayout.error = ""
