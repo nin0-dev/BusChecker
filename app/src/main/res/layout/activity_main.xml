@@ -6,529 +6,534 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="16dp">
-
-        <ScrollView
-            android:id="@+id/scrollview"
+        android:layout_width="match_parent">
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="16dp">
 
-            <LinearLayout
+            <ScrollView
+                android:id="@+id/scrollview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fitsSystemWindows="true"
-                android:gravity="top"
-                android:orientation="vertical">
-                <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="10dp"
-                    style="@style/Widget.Material3.CardView.Filled">
-
-                    <LinearLayout
+                    android:fitsSystemWindows="true"
+                    android:gravity="top"
+                    android:orientation="vertical">
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        style="@style/Widget.Material3.CardView.Filled">
 
-                        <TextView
-                            android:id="@+id/freeukraine"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Quick search"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginTop="7dp"
-                            android:layout_marginBottom="25dp"
-
-                            android:hint="Stop code"
-                            app:endIconCheckable="false"
-                            app:errorEnabled="false">
-
-                            <EditText
-                                android:id="@+id/quicksearch_field"
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/freeukraine"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:ems="10"
-                                android:inputType="number" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                        <Button
-                            android:id="@+id/quickcheck_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Quick search"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="25dp"
+
+                                android:hint="Stop code"
+                                app:endIconCheckable="false"
+                                app:errorEnabled="false">
+
+                                <EditText
+                                    android:id="@+id/quicksearch_field"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:inputType="number" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <Button
+                                android:id="@+id/quickcheck_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check1_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            <TextView
+                                android:id="@+id/text_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
+                            <Button
+                                android:id="@+id/check1_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check2fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                            <TextView
+                                android:id="@+id/text_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
+                            <Button
+                                android:id="@+id/check2_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check3fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
+
+                            <Button
+                                android:id="@+id/check3_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check4fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
+
+                            <Button
+                                android:id="@+id/check4_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check5fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
+
+                            <Button
+                                android:id="@+id/check5_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check6fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
+                            <TextView
+                                android:id="@+id/text_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
 
-                    </LinearLayout>
+                            <Button
+                                android:id="@+id/check6_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check7fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
+
+                            <Button
+                                android:id="@+id/check7_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check8fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
+                            <TextView
+                                android:id="@+id/text_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
 
-                    </LinearLayout>
+                            <Button
+                                android:id="@+id/check8_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="10dp">
 
-                        <TextView
-                            android:id="@+id/title_fav9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check9fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/text_9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
+
+                            <Button
+                                android:id="@+id/check9_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
+                        </LinearLayout>
 
 
-                </com.google.android.material.card.MaterialCardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                <com.google.android.material.card.MaterialCardView
-                    style="@style/Widget.Material3.CardView.Outlined"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="100dp">
-
-                    <LinearLayout
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="100dp">
 
-                        <TextView
-                            android:id="@+id/title_fav10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Title 1"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/text_fav10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="30dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Text 1" />
+                            <TextView
+                                android:id="@+id/title_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Title 1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-                        <Button
-                            android:id="@+id/check10fav_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="0dp"
-                            android:layout_marginBottom="20dp"
-                            android:text="Check" />
+                            <TextView
+                                android:id="@+id/text_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="30dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="15dp"
+                                android:text="Text 1" />
 
-                    </LinearLayout>
+                            <Button
+                                android:id="@+id/check10_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Check" />
 
-
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
-
-        </ScrollView>
+                        </LinearLayout>
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/extended_fab"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:menu="@menu/bottom_navigation" />
-
-    </FrameLayout>
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="105dp"
+            android:layout_gravity="bottom|end"
+            android:contentDescription=""
+            app:srcCompat="@drawable/ic_baseline_add_24"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
