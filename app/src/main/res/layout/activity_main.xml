@@ -68,8 +68,10 @@
                                     android:ems="10"
                                     android:inputType="number" />
                             </com.google.android.material.textfield.TextInputLayout>
+
                             <Button
                                 android:id="@+id/quickcheck_button"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -108,12 +110,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check1_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -150,12 +152,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check2_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -192,12 +194,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check3_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -236,12 +238,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check4_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -280,12 +282,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check5_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -324,12 +326,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check6_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -369,12 +371,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check7_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -413,12 +415,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check8_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -458,12 +460,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check9_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -502,12 +504,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="30dp"
-                                android:layout_marginTop="20dp"
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
                             <Button
                                 android:id="@+id/check10_button"
+                                style="@style/Widget.Material3.Button.TonalButton"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="30dp"
@@ -525,15 +527,16 @@
             </ScrollView>
 
         </FrameLayout>
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/extended_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginVertical="105dp"
             android:layout_gravity="bottom|end"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="25dp"
             android:contentDescription=""
-            app:srcCompat="@drawable/ic_baseline_add_24"/>
+            app:srcCompat="@drawable/ic_baseline_add_24" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
