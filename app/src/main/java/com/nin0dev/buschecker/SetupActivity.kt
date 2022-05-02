@@ -151,13 +151,8 @@ class SetupActivity : AppCompatActivity() {
                             null,
                             null
                         )
-                        MaterialAlertDialogBuilder(this)
-                            .setTitle("Info")
-                            .setMessage("You should receive soon a SMS saying that \"your language is now English\". Click on it, and block the number. If you don't know how to do it, search on Google \"Block SMS conversation [device model]\".")
-                            .setPositiveButton("OK") { dialog, which ->
-                                finish()
-                            }
-                            .show()
+                        finish()
+
                     }
                     .show()
 
