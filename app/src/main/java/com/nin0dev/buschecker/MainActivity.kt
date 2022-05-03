@@ -41,12 +41,11 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.appbar_main, menu)
         return true
     }
+    @SuppressLint("SetTextI18n")
     fun cards()
     {
         //region Variable declaration
         val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
-        sp.edit().putString("title1", "hello")
-        sp.edit().commit()
         var availableElements = 10
         //region 10 title elements
         val title1e = findViewById<TextView>(R.id.title_1)
@@ -227,6 +226,210 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
             recreate()
         }
+        //region Delete buttons
+        //region Variable declaration
+        val delete1 = findViewById<Button>(R.id.delete_1)
+        val delete2 = findViewById<Button>(R.id.delete_2)
+        val delete3 = findViewById<Button>(R.id.delete_3)
+        val delete4 = findViewById<Button>(R.id.delete_4)
+        val delete5 = findViewById<Button>(R.id.delete_5)
+        val delete6 = findViewById<Button>(R.id.delete_6)
+        val delete7 = findViewById<Button>(R.id.delete_7)
+        val delete8 = findViewById<Button>(R.id.delete_8)
+        val delete9 = findViewById<Button>(R.id.delete_9)
+        val delete10 = findViewById<Button>(R.id.delete_10)
+        //endregion
+        delete1.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title1", "null")
+                    e.putString("text1", "null")
+                    e.putString("stopCode1", "null")
+                    e.putString("routeNumber1", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete2.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title2", "null")
+                    e.putString("text2", "null")
+                    e.putString("stopCode2", "null")
+                    e.putString("routeNumber2", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete3.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title3", "null")
+                    e.putString("text3", "null")
+                    e.putString("stopCode3", "null")
+                    e.putString("routeNumber3", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete4.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title4", "null")
+                    e.putString("text4", "null")
+                    e.putString("stopCode4", "null")
+                    e.putString("routeNumber4", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete5.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title5", "null")
+                    e.putString("text5", "null")
+                    e.putString("stopCode5", "null")
+                    e.putString("routeNumber5", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete6.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title6", "null")
+                    e.putString("text6", "null")
+                    e.putString("stopCode6", "null")
+                    e.putString("routeNumber6", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete7.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title7", "null")
+                    e.putString("text7", "null")
+                    e.putString("stopCode7", "null")
+                    e.putString("routeNumber7", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete8.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title8", "null")
+                    e.putString("text8", "null")
+                    e.putString("stopCode8", "null")
+                    e.putString("routeNumber8", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete9.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title9", "null")
+                    e.putString("text9", "null")
+                    e.putString("stopCode9", "null")
+                    e.putString("routeNumber9", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        delete10.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Question")
+                .setMessage("Are you sure you want to delete this stop?")
+                .setPositiveButton("Yes") { dialog, which ->
+                    val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+                    val e = sp.edit()
+                    e.putString("title10", "null")
+                    e.putString("text10", "null")
+                    e.putString("stopCode10", "null")
+                    e.putString("routeNumber10", "null")
+                    e.apply()
+                    recreate()
+                }
+                .setNegativeButton("No") { dialog, which ->
+
+                }
+                .show()
+        }
+        //endregion
     }
 
 }
