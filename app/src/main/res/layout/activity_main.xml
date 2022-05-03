@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,13 +27,14 @@
                     android:fitsSystemWindows="true"
                     android:gravity="top"
                     android:orientation="vertical">
+
                     <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Material3.CardView.Filled"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
                         android:layout_marginTop="30dp"
-                        android:layout_marginBottom="10dp"
-                        style="@style/Widget.Material3.CardView.Filled">
+                        android:layout_marginBottom="10dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -69,20 +71,39 @@
                                     android:inputType="number" />
                             </com.google.android.material.textfield.TextInputLayout>
 
-                            <Button
-                                android:id="@+id/quickcheck_button"
-                                style="@style/Widget.Material3.Button.OutlinedButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/quickcheck_button"
+                                    style="@style/Widget.Material3.Button.OutlinedButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/separationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="Saved bus stops"
+                        android:textAllCaps="false" />
+
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved1"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -113,19 +134,46 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check1_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check1_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_1"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_1"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved2"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -155,19 +203,46 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check2_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check2_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_2"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_2"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
+
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved3"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -197,21 +272,47 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check3_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check3_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_3"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_3"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved4"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -241,21 +342,47 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check4_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check4_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_4"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_4"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved5"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -285,21 +412,47 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check5_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check5_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_5"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_5"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved6"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -329,15 +482,40 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check6_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check6_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_6"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_6"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -345,6 +523,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved7"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -374,21 +553,47 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check7_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check7_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_7"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_7"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved8"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -418,15 +623,40 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check8_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check8_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_8"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_8"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -434,6 +664,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved9"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -463,21 +694,47 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check9_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check9_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_9"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_9"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
 
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/saved10"
                         style="@style/Widget.Material3.CardView.Outlined"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -507,15 +764,40 @@
                                 android:layout_marginBottom="15dp"
                                 android:text="Text 1" />
 
-                            <Button
-                                android:id="@+id/check10_button"
-                                style="@style/Widget.Material3.Button.TonalButton"
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="30dp"
-                                android:layout_marginTop="0dp"
-                                android:layout_marginBottom="20dp"
-                                android:text="Check" />
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/check10_button"
+                                    style="@style/Widget.Material3.Button.TonalButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="Check" />
+
+                                <Button
+                                    android:id="@+id/edit_10"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_edit_24" />
+
+                                <Button
+                                    android:id="@+id/delete_10"
+                                    style="@style/Widget.Material3.Button.IconButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    app:icon="@drawable/ic_baseline_delete_24" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
