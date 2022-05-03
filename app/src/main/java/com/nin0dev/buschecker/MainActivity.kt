@@ -37,7 +37,10 @@ class MainActivity : AppCompatActivity() {
         buttons()
         cards()
     }
-
+    override fun onCreateOptionsMenu(menu: Menu) : Boolean {
+        menuInflater.inflate(R.menu.appbar_main, menu)
+        return true
+    }
     fun cards()
     {
         //region Variable declaration
