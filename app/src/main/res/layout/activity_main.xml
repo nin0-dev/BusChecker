@@ -90,6 +90,15 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <TextView
+                    android:id="@+id/separationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Saved bus stops"
+                    android:textAllCaps="false" />
+
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/saved1"
                     style="@style/Widget.Material3.CardView.Outlined"
@@ -791,15 +800,6 @@
 
 
                 </com.google.android.material.card.MaterialCardView>
-
-                <TextView
-                    android:id="@+id/separationText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:text="Saved bus stops"
-                    android:textAllCaps="false" />
 
             </LinearLayout>
 
