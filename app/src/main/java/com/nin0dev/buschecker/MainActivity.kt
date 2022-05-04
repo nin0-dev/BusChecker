@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.textfield.TextInputLayout
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -223,17 +224,13 @@ class MainActivity : AppCompatActivity() {
             val textView = findViewById<EditText>(R.id.quicksearch_field)
             if(textView.text.isNullOrBlank())
             {
-                MaterialAlertDialogBuilder(this)
-                    .setTitle("Error")
-                    .setMessage("Looks like you haven't put anything in the quick search text field.")
-                    .setPositiveButton("OK") { dialog, which ->
-
-                    }
-                    .show()
+                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Required"
                 return@setOnClickListener
             }
+
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
+            findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = ""
             textView.setText("")
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
             recreate()
