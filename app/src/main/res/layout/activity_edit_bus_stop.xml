@@ -38,7 +38,7 @@
                     app:errorEnabled="false">
 
                     <EditText
-                        android:id="@+id/name_field"
+                        android:id="@+id/name_fieldE"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10" />
@@ -58,7 +58,7 @@
                     app:errorEnabled="false">
 
                     <EditText
-                        android:id="@+id/stopcode_field"
+                        android:id="@+id/stopcode_fieldE"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
@@ -80,7 +80,7 @@
                     app:errorEnabled="false">
 
                     <EditText
-                        android:id="@+id/lineNumber_field"
+                        android:id="@+id/lineNumber_fieldE"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
