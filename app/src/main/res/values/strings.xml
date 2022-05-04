@@ -36,4 +36,5 @@
     <string name="verify">Verify</string>
     <string name="save">Save</string>
     <string name="addStop">Add bus stop</string>
+    <string name="editStop">Edit bus stop</string>
 </resources>

@@ -33,7 +33,7 @@
                     android:layout_marginTop="15dp"
 
                     android:layout_marginBottom="15dp"
-                    android:hint="Name"
+                    android:hint="@string/name"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
 
@@ -53,7 +53,7 @@
                     android:layout_marginHorizontal="20dp"
 
                     android:layout_marginBottom="15dp"
-                    android:hint="Stop code"
+                    android:hint="@string/stopCode"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
 
@@ -75,7 +75,7 @@
                     android:layout_marginHorizontal="20dp"
 
                     android:layout_marginBottom="15dp"
-                    android:hint="Route number"
+                    android:hint="@string/routeNumber"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
 
@@ -95,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:text="Verify" />
+                    android:text="@string/verify" />
 
             </LinearLayout>
 
