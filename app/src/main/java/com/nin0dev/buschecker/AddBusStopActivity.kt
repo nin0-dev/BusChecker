@@ -19,7 +19,7 @@ class AddBusStopActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_add_bus_stop)
-        supportActionBar?.setTitle("Add bus stop")
+        supportActionBar?.setTitle(getString(R.string.addStop))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
 
@@ -101,32 +101,32 @@ class AddBusStopActivity : AppCompatActivity() {
         if(stopCode.text.length != 5)
         {
             // Not valid stop code
-            stopCodeL.error = "Invalid"
+            stopCodeL.error = getString(R.string.invalid)
             stopCode.setText("")
             validFields--
         }
         if(stopCode.text.isNullOrEmpty())
         {
             // Empty stop code
-            stopCodeL.error = "Required"
+            stopCodeL.error = getString(R.string.required)
             validFields--
         }
         if(routeNumber.text.isNullOrEmpty())
         {
             // Empty route number
-            routeNumberL.error = "Required"
+            routeNumberL.error = getString(R.string.required)
             validFields--
         }
         if(routeNumber.text.isNullOrEmpty())
         {
             // Empty route number
-            routeNumberL.error = "Required"
+            routeNumberL.error = getString(R.string.required)
             validFields--
         }
         if(name.text.isNullOrEmpty())
         {
             // Empty name
-            nameL.error = "Required"
+            nameL.error = getString(R.string.required)
             validFields--
         }
         if(validFields != 3)
@@ -162,20 +162,20 @@ class AddBusStopActivity : AppCompatActivity() {
             if(stopCode.text.length != 5)
             {
                 // Not valid stop code
-                stopCodeL.error = "Invalid"
+                stopCodeL.error = getString(R.string.invalid)
                 stopCode.setText("")
                 validFields--
             }
             if(stopCode.text.isNullOrEmpty())
             {
                 // Empty stop code
-                stopCodeL.error = "Required"
+                stopCodeL.error = getString(R.string.required)
                 validFields--
             }
             if(routeNumber.text.isNullOrEmpty())
             {
                 // Empty route number
-                routeNumberL.error = "Required"
+                routeNumberL.error = getString(R.string.required)
                 validFields--
             }
             if(validFields != 2)
@@ -188,7 +188,7 @@ class AddBusStopActivity : AppCompatActivity() {
             //region Verification process
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, stopCode.text.toString() + " " + routeNumber.text.toString(), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
             //endregion
         }
     }

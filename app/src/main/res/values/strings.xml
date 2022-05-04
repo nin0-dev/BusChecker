@@ -31,4 +31,9 @@
     <string name="moneyDialog">You will see a popup saying that BusChecker sending a SMS to 52736 will cause charges. It won\'t be the case; click on \"Remember my choice\" and on \"Akways Allow\".</string>
     <string name="permsNotGranted">Permissions not granted</string>
     <string name="noSMSrationale">You must grant SMS permission to BusChecker to continue.</string>
+    <string name="name">Name</string>
+    <string name="routeNumber">Route number</string>
+    <string name="verify">Verify</string>
+    <string name="save">Save</string>
+    <string name="addStop">Add bus stop</string>
 </resources>

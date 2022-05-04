@@ -31,4 +31,9 @@
     <string name="moneyDialog">Vous allez voir une alerte qui dit que BusChecker qui souhaite envoyer un SMS à 52736 entraînera des frais. Ce ne sera pas le cas; appuyez sur \"Mémoriser mon choix\" puis sur \"Toujours autoriser\".</string>
     <string name="permsNotGranted">Permissions non accordées</string>
     <string name="noSMSrationale">Vous devez accorder à BusChecker la permission SMS pour continuer.</string>
+    <string name="name">Nom</string>
+    <string name="routeNumber">Numéro de ligne</string>
+    <string name="verify">Vérifier</string>
+    <string name="save">Sauvegarder</string>
+    <string name="addStop">Ajouter un arrêt</string>
 </resources>
