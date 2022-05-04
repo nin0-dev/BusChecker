@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
 import android.telephony.SmsManager
 import android.view.Menu
@@ -20,6 +21,7 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import org.w3c.dom.Text
 
@@ -38,6 +40,9 @@ class MainActivity : AppCompatActivity() {
         }
         buttons()
         cards()
+        Snackbar.make(findViewById(R.id.reallyMainLayout), "je t'aime guty ❤", Snackbar.LENGTH_LONG).setBackgroundTint(resources.getColor(R.color.fullscreendialog_background)).setTextColor(resources.getColor(R.color.sameColor)).setAction("moi aussi") {
+
+        }.setActionTextColor(resources.getColor(R.color.sameColor)).show()
     }
     override fun onCreateOptionsMenu(menu: Menu) : Boolean {
         menuInflater.inflate(R.menu.appbar_main, menu)
