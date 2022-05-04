@@ -11,4 +11,6 @@
     <color name="ic_launcher_background">#FFBB86FC</color>
     <color name="opposite_bw">#FF000000</color>
     <color name="fullscreendialog_background">#E9FFFFFF</color>
+    <color name="snackbarColor">#FFFF0000</color>
+
 </resources>
