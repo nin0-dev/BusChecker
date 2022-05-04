@@ -12,5 +12,5 @@
     <color name="opposite_bw">#FF000000</color>
     <color name="fullscreendialog_background">#E9FFFFFF</color>
     <color name="snackbarColor">#FFFF0000</color>
-
+    <color name="sameColor">#FF000000</color>
 </resources>

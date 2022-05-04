@@ -2,4 +2,5 @@
 <resources>
     <color name="fullscreendialog_background">#E91C1C1C</color>
     <color name="opposite_bw">#FFFFFFFF</color>
+    <color name="sameColor">#FFFFFFFF</color>
 </resources>
