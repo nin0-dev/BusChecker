@@ -234,6 +234,8 @@ class MainActivity : AppCompatActivity() {
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
             textView.setText("")
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
         //region Delete buttons
         //region Variable declaration
