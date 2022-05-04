@@ -16,4 +16,19 @@
     <string name="noStops">No saved bus stops, click the + to add one</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="notifications">Notifications</string>
+    <string name="sms" translatable="false">SMS</string>
+    <string name="grant">Grant</string>
+    <string name="granted">Granted</string>
+    <string name="notificationsRationale">May be used to send you bus arrival times or other announcements.</string>
+    <string name="smsRationale">BusChecker works by querying transport companies\' SMS services. To do this, it needs the SMS permissions.</string>
+    <string name="continue_">Continue</string>
+    <string name="disclaimer">BusChecker uses SMS (text messages) to get the bus arrival times. These SMS count against your mobile plan. \nDON\'T USE THE APP IF YOU DON\'T HAVE AN UNLIMITED SMS PLAN. \n\nI am not responsible if you continue to use the app and you use all of your available SMS. Continue only if you\'re sure that your SMS plan is unlimited.</string>
+    <string name="startSetup">Start setup</string>
+    <string name="setup">Setup</string>
+    <string name="warning">Warning</string>
+    <string name="permissions">Permissions</string>
+    <string name="moneyDialog">You will see a popup saying that BusChecker sending a SMS to 52736 will cause charges. It won\'t be the case; click on \"Remember my choice\" and on \"Akways Allow\".</string>
+    <string name="permsNotGranted">Permissions not granted</string>
+    <string name="noSMSrationale">You must grant SMS permission to BusChecker to continue.</string>
 </resources>

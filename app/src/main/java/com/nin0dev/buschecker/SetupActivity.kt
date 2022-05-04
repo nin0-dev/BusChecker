@@ -27,7 +27,7 @@ class SetupActivity : AppCompatActivity() {
         buttons()
         components()
         startImageTint()
-        updateActionBarText("Setup")
+        updateActionBarText(getString(R.string.setup))
     }
     fun startImageTint()
     {
@@ -95,11 +95,11 @@ class SetupActivity : AppCompatActivity() {
     {
         val startButton = findViewById<Button>(R.id.startButton)
         startButton.setOnClickListener {
-            switchScreens(findViewById(R.id.start), findViewById(R.id.disclaimer), "Warning")
+            switchScreens(findViewById(R.id.start), findViewById(R.id.disclaimer), getString(R.string.warning))
         }
         val notResponsibleButton = findViewById<Button>(R.id.notResponsibleButton)
         notResponsibleButton.setOnClickListener {
-            switchScreens(findViewById(R.id.disclaimer), findViewById(R.id.permissions), "Permissions")
+            switchScreens(findViewById(R.id.disclaimer), findViewById(R.id.permissions), getString(R.string.permissions))
         }
         val notificationsButton = findViewById<Button>(R.id.grantNotificationsButton)
         notificationsButton.setOnClickListener {
@@ -110,12 +110,12 @@ class SetupActivity : AppCompatActivity() {
             {
                 // Permission granted
                 notificationsButton.isEnabled = false
-                notificationsButton.text = "Granted"
+                notificationsButton.text = getString(R.string.granted)
             }
             if(ContextCompat.checkSelfPermission(this, "android.permission.POST_NOTIFICATIONS") == PERMISSION_DENIED)
             {
                 // Permission denied
-                notificationsButton.text = "Grant"
+                notificationsButton.text = getString(R.string.grant)
                 //return@setOnClickListener
             }
         }
@@ -128,11 +128,11 @@ class SetupActivity : AppCompatActivity() {
             {
                 // Permission granted
                 smsButton.isEnabled = false
-                smsButton.text = "Granted"
+                smsButton.text = getString(R.string.granted)
             }
             if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PERMISSION_DENIED)
             {
-                smsButton.text = "Grant"
+                smsButton.text = getString(R.string.grant)
             }
         }
         val continueButton = findViewById<Button>(R.id.continueButton)
@@ -140,8 +140,8 @@ class SetupActivity : AppCompatActivity() {
             if(ContextCompat.checkSelfPermission(this, "android.permission.RECEIVE_SMS") == PERMISSION_GRANTED)
             {
                 MaterialAlertDialogBuilder(this)
-                    .setTitle("Warning")
-                    .setMessage("You will see a popup saying that BusChecker sending a SMS to 52736 may cause charges. Click on \"Remember my choice\" and on \"Always Allow\".")
+                    .setTitle(getString(R.string.warning))
+                    .setMessage(getString(R.string.moneyDialog))
                     .setPositiveButton("OK") { dialog, which ->
                         val smgr: SmsManager = SmsManager.getDefault()
                         smgr.sendTextMessage(
@@ -160,8 +160,8 @@ class SetupActivity : AppCompatActivity() {
             else
             {
                 MaterialAlertDialogBuilder(this)
-                    .setTitle("Permissions not granted")
-                    .setMessage("You must grant SMS permission to BusChecker to continue.")
+                    .setTitle(getString(R.string.permsNotGranted))
+                    .setMessage(getString(R.string.noSMSrationale))
                     .setPositiveButton("OK") { dialog, which ->
 
                     }

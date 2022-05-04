@@ -17,4 +17,18 @@
     <string name="noStops">Pas d\'arrêts de bus sauvegardés, appuyez sur le + pour en ajouter</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
+    <string name="notifications">Notifications</string>
+    <string name="grant">Autoriser</string>
+    <string name="granted">Autorisée</string>
+    <string name="notificationsRationale">Peut être utilisée pour vous envoyer les heures d\'arrivée des bus ou d\'autres annonces.</string>
+    <string name="smsRationale">BusChecker fonctionne en utilisant les services SMS des compagnies de transport. Pour faire ça, l\'appli a besoin des autorisations SMS.</string>
+    <string name="continue_">Continuer</string>
+    <string name="disclaimer">BusChecker utilise les SMS (messages texte) pour obtenir les heures d\'arrivée des bus. Ces SMS sont décomptés à partir de votre forfait mobile. \nN\'UTILISEZ PAS L\'APPLICATION SI VOUS N\'AVEZ PAS UN FORFAIT SMS ILLIMITÉ. \n\nJe ne suis pas responsable si vous continuez à utiliser l\'application et que vous utilisez tous vos SMS disponibles. Continuez uniquement si vous êtes sûr que votre forfait SMS est illimité.</string>
+    <string name="startSetup">Commencer la configuration</string>
+    <string name="setup">Configuration</string>
+    <string name="warning">Avertissement</string>
+    <string name="permissions">Permissions</string>
+    <string name="moneyDialog">Vous allez voir une alerte qui dit que BusChecker qui souhaite envoyer un SMS à 52736 entraînera des frais. Ce ne sera pas le cas; appuyez sur \"Mémoriser mon choix\" puis sur \"Toujours autoriser\".</string>
+    <string name="permsNotGranted">Permissions non accordées</string>
+    <string name="noSMSrationale">Vous devez accorder à BusChecker la permission SMS pour continuer.</string>
 </resources>

@@ -53,7 +53,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginTop="20dp"
-                                android:text="Notifications"
+                                android:text="@string/notifications"
                                 android:textSize="20sp" />
 
                             <TextView
@@ -62,7 +62,7 @@
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="13dp"
-                                android:text="May be used to send you bus arrival times or other announcements." />
+                                android:text="@string/notificationsRationale" />
 
                             <Button
                                 android:id="@+id/grantNotificationsButton"
@@ -71,7 +71,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginBottom="20dp"
-                                android:text="Grant"
+                                android:text="@string/grant"
                                 app:icon="@drawable/ic_baseline_security_24" />
 
                         </LinearLayout>
@@ -97,7 +97,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginTop="20dp"
-                                android:text="SMS"
+                                android:text="@string/sms"
                                 android:textSize="20sp" />
 
                             <TextView
@@ -106,7 +106,7 @@
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="13dp"
-                                android:text="BusChecker works by querying transport companies' SMS services. To do this, it needs the SMS permissions." />
+                                android:text="@string/smsRationale" />
 
                             <Button
                                 android:id="@+id/grantSMSButton"
@@ -115,7 +115,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="18dp"
                                 android:layout_marginBottom="20dp"
-                                android:text="Grant"
+                                android:text="@string/grant"
                                 app:icon="@drawable/ic_baseline_security_24" />
 
                         </LinearLayout>
@@ -160,7 +160,7 @@
                             android:layout_gravity="bottom|end"
                             android:layout_marginEnd="13dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Continue"
+                            android:text="@string/continue_"
                             app:icon="@drawable/ic_baseline_arrow_forward_24" />
 
                     </TableRow>
@@ -202,7 +202,7 @@
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="BusChecker uses SMS (text messages) to get the bus arrival times. These SMS count against your mobile plan. \nDON'T USE THE APP IF YOU DON'T HAVE AN UNLIMITED SMS PLAN. \n\nI am not responsible if you continue to use the app and you use all of your available SMS. Continue only if you're sure that your SMS plan is unlimited." />
+                        android:text="@string/disclaimer" />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
 
@@ -242,7 +242,7 @@
                             android:layout_gravity="bottom|end"
                             android:layout_marginEnd="13dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Continue"
+                            android:text="@string/continue_"
                             app:icon="@drawable/ic_baseline_arrow_forward_24" />
                     </TableRow>
                 </LinearLayout>
@@ -327,7 +327,7 @@
                             android:layout_gravity="bottom|end"
                             android:layout_marginEnd="13dp"
                             android:layout_marginBottom="5dp"
-                            android:text="Start setup"
+                            android:text="@string/startSetup"
                             app:icon="@drawable/ic_baseline_arrow_forward_24" />
 
                     </TableRow>
