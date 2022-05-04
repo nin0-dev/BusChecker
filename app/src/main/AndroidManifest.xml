@@ -18,6 +18,9 @@
         android:theme="@style/Theme.BusChecker"
         tools:targetApi="32">
         <activity
+            android:name=".EditBusStopActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddBusStopActivity"
             android:exported="false" />
         <activity
