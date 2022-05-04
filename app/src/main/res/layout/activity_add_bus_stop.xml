@@ -25,13 +25,14 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_textlayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
 
+                    android:layout_marginBottom="15dp"
                     android:hint="Name"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
@@ -45,12 +46,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/stopcode_textlayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginBottom="15dp"
 
+                    android:layout_marginBottom="15dp"
                     android:hint="Stop code"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
@@ -60,17 +62,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="5" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/lineNumber_textlayout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginBottom="15dp"
 
+                    android:layout_marginBottom="15dp"
                     android:hint="Route number"
                     app:endIconCheckable="false"
                     app:errorEnabled="false">
@@ -80,17 +84,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:maxLength="3" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/verifyButton"
                     style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:text="Verify" />
+
             </LinearLayout>
 
         </ScrollView>
