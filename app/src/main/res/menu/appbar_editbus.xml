@@ -4,6 +4,7 @@
 
     <item
         android:id="@+id/app_bar_switch"
+        android:onClick="saveOnClick"
         android:title="Switch"
         app:actionLayout="@layout/save_button"
         app:showAsAction="always" />
