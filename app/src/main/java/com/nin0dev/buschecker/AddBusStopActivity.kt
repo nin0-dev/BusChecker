@@ -32,13 +32,13 @@ class AddBusStopActivity : AppCompatActivity() {
         return true
     }
     override fun onSupportNavigateUp(): Boolean {
-        finish()
         startActivity(Intent(this, MainActivity::class.java))
+        finish()
         return true
     }
     override fun onBackPressed() {
-        finish()
         startActivity(Intent(this, MainActivity::class.java))
+        finish()
         super.onBackPressed()
     }
     fun findEmptySlot(): Int {
