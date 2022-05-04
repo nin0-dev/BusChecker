@@ -11,9 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.color.DynamicColors
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 class AddBusStopActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
