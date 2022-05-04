@@ -217,18 +217,15 @@ class MainActivity : AppCompatActivity() {
         }
         //endregion
     }
-    fun buttons()
-    {
+    fun buttons() {
         val quickCheckButton = findViewById<Button>(R.id.quickcheck_button)
         quickCheckButton.setOnClickListener {
             val textView = findViewById<EditText>(R.id.quicksearch_field)
-            if(textView.text.isNullOrBlank())
-            {
+            if (textView.text.isNullOrBlank()) {
                 findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Required"
                 return@setOnClickListener
             }
-            if(textView.text.length != 5)
-            {
+            if (textView.text.length != 5) {
                 findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Invalid"
                 return@setOnClickListener
             }
@@ -237,7 +234,6 @@ class MainActivity : AppCompatActivity() {
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
             textView.setText("")
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
-            recreate()
         }
         //region Delete buttons
         //region Variable declaration
@@ -443,6 +439,70 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
         //endregion
-    }
-
+        //region Check buttons
+        //region Variable declaration
+        val check1 = findViewById<Button>(R.id.check1_button)
+        val check2 = findViewById<Button>(R.id.check2_button)
+        val check3 = findViewById<Button>(R.id.check3_button)
+        val check4 = findViewById<Button>(R.id.check4_button)
+        val check5 = findViewById<Button>(R.id.check5_button)
+        val check6 = findViewById<Button>(R.id.check6_button)
+        val check7 = findViewById<Button>(R.id.check7_button)
+        val check8 = findViewById<Button>(R.id.check8_button)
+        val check9 = findViewById<Button>(R.id.check9_button)
+        val check10 = findViewById<Button>(R.id.check10_button)
+        val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
+        //endregion
+        check1.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode1", "null") + " " + sp.getString("routeNumber1", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check2.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode2", "null") + " " + sp.getString("routeNumber2", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check3.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode3", "null") + " " + sp.getString("routeNumber3", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check4.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode4", "null") + " " + sp.getString("routeNumber4", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check5.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode5", "null") + " " + sp.getString("routeNumber5", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check6.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode6", "null") + " " + sp.getString("routeNumber6", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check7.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode7", "null") + " " + sp.getString("routeNumber7", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check8.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode8", "null") + " " + sp.getString("routeNumber8", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check9.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode9", "null") + " " + sp.getString("routeNumber9", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        check10.setOnClickListener {
+            val smsManager: SmsManager = SmsManager.getDefault()
+            smsManager.sendTextMessage("52786", null, sp.getString("stopCode10", "null") + " " + sp.getString("routeNumber10", "null"), null, null)
+            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+        }
+        //endregion
+        }
 }
