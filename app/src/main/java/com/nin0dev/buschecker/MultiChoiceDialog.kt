@@ -20,19 +20,19 @@ class MultiChoiceDialog : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
         setContentView(R.layout.activity_multi_choice_dialog)
-        findViewById<TextView>(R.id.availableRoutesText).text = "Available routes for stop " + intent.getStringExtra("stop") + ":" + intent.getStringExtra("routes")
+        findViewById<TextView>(R.id.availableRoutesText).text = getString(R.string.availableRoutes) + intent.getStringExtra("stop") + ":" + intent.getStringExtra("routes")
         val continueB = findViewById<Button>(R.id.continueButton22)
         val textField = findViewById<EditText>(R.id.routeNumber_multichoice_field)
         val textFieldLayout = findViewById<TextInputLayout>(R.id.routeNumber_multichoice_layout)
         continueB.setOnClickListener {
             if(intent.getStringExtra("routes")?.contains(textField.text, true) == false)
             {
-                textFieldLayout.error = "Route doesn't exist"
+                textFieldLayout.error = getString(R.string.routeNotExist)
                 textField.setText("")
             }
             else if(textField.text.isEmpty())
             {
-                textFieldLayout.error = "Route doesn't exist"
+                textFieldLayout.error = getString(R.string.routeNotExist)
                 textField.setText("")
             }
             else
@@ -40,7 +40,7 @@ class MultiChoiceDialog : AppCompatActivity() {
                 textFieldLayout.error = ""
                 val smsManager: SmsManager = SmsManager.getDefault()
                 smsManager.sendTextMessage("52786", null, intent.getStringExtra("stop") +  " " + textField.text, null, null)
-                Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
                 finish()
             }
         }

@@ -37,4 +37,12 @@
     <string name="save">Save</string>
     <string name="addStop">Add bus stop</string>
     <string name="editStop">Edit bus stop</string>
+    <string name="severalRoutes">Several routes available</string>
+    <string name="availableRoutes">Available routes for stop</string>
+    <string name="routeNotExist">Route doesn\'t exist</string>
+    <string name="busTimesFor">"Bus times for stop "</string>
+    <string name="invalidStopCode">Invalid stop code</string>
+    <string name="makeSureStopCode">Make sure that you entered the right stop code, and try again.</string>
+    <string name="invalidRouteNumber">Invalid route number</string>
+    <string name="makeSureRouteNumber">Make sure that you entered the right route number, and try again.</string>
 </resources>

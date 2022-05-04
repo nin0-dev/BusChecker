@@ -37,4 +37,12 @@
     <string name="save">Sauvegarder</string>
     <string name="addStop">Ajouter un arrêt</string>
     <string name="editStop">Modifier un arrêt</string>
+    <string name="severalRoutes">Plusieurs lignes disponibles</string>
+    <string name="availableRoutes">"Lignes disponibles pour l'arrêt "</string>
+    <string name="routeNotExist">La ligne n\'existe pas</string>
+    <string name="busTimesFor">"Heures du bus pour l'arrêt "</string>
+    <string name="makeSureStopCode">Assurez-vous d\'avoir saisi le bon code d\'arrêt, puis réessayez.</string>
+    <string name="invalidStopCode">Code d\'arrêt invalide</string>
+    <string name="makeSureRouteNumber">Assurez-vous que vous avez saisi le bon numéro de ligne, puis réessayez.</string>
+    <string name="invalidRouteNumber">Numéro de ligne invalide</string>
 </resources>

@@ -8,6 +8,7 @@ import android.content.Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.os.Build
 import android.telephony.SmsMessage
+import com.nin0dev.buschecker.R
 import android.util.Log
 import android.view.WindowManager
 import android.widget.EditText
@@ -57,7 +58,7 @@ class SMSReceiver : BroadcastReceiver() {
                 busTimes = busTimes.substringBefore("\n")
                 busTimes = busTimes.replace("*", "")
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Bus times for $stopNumber")
+                i.putExtra("title", context.resources.getString(R.string.busTimesFor) + stopNumber)
                 i.putExtra("text", busTimes)
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
@@ -65,24 +66,24 @@ class SMSReceiver : BroadcastReceiver() {
             if(regexInvalid.containsMatchIn(text!!))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Invalid stop code")
-                i.putExtra("text", "Make sure that you entered the right stop code, and try again.")
+                i.putExtra("title", context.resources.getString(R.string.invalidStopCode))
+                i.putExtra("text", context.resources.getString(R.string.makeSureStopCode))
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
             if(regexInvalid2.containsMatchIn(text))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Invalid stop code")
-                i.putExtra("text", "Make sure that you entered the right stop code, and try again.")
+                i.putExtra("title", context.resources.getString(R.string.invalidStopCode))
+                i.putExtra("text", context.resources.getString(R.string.makeSureStopCode))
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }
             if(regexInvalidRoute.containsMatchIn(text))
             {
                 val i = Intent(context, ShowDIalogActivity::class.java)
-                i.putExtra("title", "Invalid route number")
-                i.putExtra("text", "Make sure that you entered the right route number, and try again.")
+                i.putExtra("title", context.resources.getString(R.string.invalidRouteNumber))
+                i.putExtra("text", context.resources.getString(R.string.makeSureRouteNumber))
                 i.setFlags(FLAG_ACTIVITY_NEW_TASK + FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
                 ActivityCompat.startActivity(context, i, ActivityOptionsCompat.makeBasic().toBundle())
             }

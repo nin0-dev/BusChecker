@@ -49,15 +49,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif"
-                                android:text="Several routes available"
+                                android:text="@string/severalRoutes"
                                 android:textSize="20sp" />
 
                             <TextView
                                 android:id="@+id/availableRoutesText"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:text="Available routes for stop 54462: 84, 953, 875" />
+                                android:layout_marginTop="5dp" />
 
                             <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/routeNumber_multichoice_layout"
@@ -68,7 +67,7 @@
                                 android:layout_marginTop="7dp"
 
                                 android:layout_marginBottom="0dp"
-                                android:hint="Route number"
+                                android:hint="@string/routeNumber"
                                 app:endIconCheckable="false"
                                 app:errorEnabled="false">>
 
@@ -87,7 +86,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_gravity="right"
                                 android:layout_marginTop="15dp"
-                                android:text="Continue" />
+                                android:text="@string/continue_" />
                         </LinearLayout>
                     </TableRow>
                 </LinearLayout>
