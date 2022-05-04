@@ -199,21 +199,21 @@ class MainActivity : AppCompatActivity() {
         title10e.text = title10
         //endregion
         //region Set texts
-        text1e.text = "Stop $stopCode1 / Route $routeNumber1"
-        text2e.text = "Stop $stopCode2 / Route $routeNumber2"
-        text3e.text = "Stop $stopCode3 / Route $routeNumber3"
-        text4e.text = "Stop $stopCode4 / Route $routeNumber4"
-        text5e.text = "Stop $stopCode5 / Route $routeNumber5"
-        text6e.text = "Stop $stopCode6 / Route $routeNumber6"
-        text7e.text = "Stop $stopCode7 / Route $routeNumber7"
-        text8e.text = "Stop $stopCode8 / Route $routeNumber8"
-        text9e.text = "Stop $stopCode9 / Route $routeNumber9"
-        text10e.text = "Stop $stopCode10 / Route $routeNumber10"
+        text1e.text = "${getString(R.string.stop)} $stopCode1 / ${getString(R.string.route)} $routeNumber1"
+        text2e.text = "${getString(R.string.stop)} $stopCode2 / ${getString(R.string.route)} $routeNumber2"
+        text3e.text = "${getString(R.string.stop)} $stopCode3 / ${getString(R.string.route)} $routeNumber3"
+        text4e.text = "${getString(R.string.stop)} $stopCode4 / ${getString(R.string.route)} $routeNumber4"
+        text5e.text = "${getString(R.string.stop)} $stopCode5 / ${getString(R.string.route)} $routeNumber5"
+        text6e.text = "${getString(R.string.stop)} $stopCode6 / ${getString(R.string.route)} $routeNumber6"
+        text7e.text = "${getString(R.string.stop)} $stopCode7 / ${getString(R.string.route)} $routeNumber7"
+        text8e.text = "${getString(R.string.stop)} $stopCode8 / ${getString(R.string.route)} $routeNumber8"
+        text9e.text = "${getString(R.string.stop)} $stopCode9 / ${getString(R.string.route)} $routeNumber9"
+        text10e.text = "${getString(R.string.stop)} $stopCode10 / ${getString(R.string.route)} $routeNumber10"
         //endregion
         //region Set separation text
         if(availableElements == 0)
         {
-            findViewById<TextView>(R.id.separationText).text = "No saved bus stops, click the + to add one"
+            findViewById<TextView>(R.id.separationText).text = getString(R.string.noStops)
         }
         //endregion
     }
@@ -222,18 +222,18 @@ class MainActivity : AppCompatActivity() {
         quickCheckButton.setOnClickListener {
             val textView = findViewById<EditText>(R.id.quicksearch_field)
             if (textView.text.isNullOrBlank()) {
-                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Required"
+                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = getString(R.string.required)
                 return@setOnClickListener
             }
             if (textView.text.length != 5) {
-                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Invalid"
+                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = getString(R.string.invalid)
                 return@setOnClickListener
             }
             findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = ""
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
             textView.setText("")
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -253,8 +253,8 @@ class MainActivity : AppCompatActivity() {
         delete1.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title1", "null")
@@ -264,7 +264,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -272,8 +272,8 @@ class MainActivity : AppCompatActivity() {
         delete2.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title2", "null")
@@ -283,7 +283,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -291,8 +291,8 @@ class MainActivity : AppCompatActivity() {
         delete3.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title3", "null")
@@ -302,7 +302,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -310,8 +310,8 @@ class MainActivity : AppCompatActivity() {
         delete4.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title4", "null")
@@ -321,7 +321,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -329,8 +329,8 @@ class MainActivity : AppCompatActivity() {
         delete5.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title5", "null")
@@ -340,7 +340,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -348,8 +348,8 @@ class MainActivity : AppCompatActivity() {
         delete6.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title6", "null")
@@ -359,7 +359,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -367,8 +367,8 @@ class MainActivity : AppCompatActivity() {
         delete7.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title7", "null")
@@ -378,7 +378,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -386,8 +386,8 @@ class MainActivity : AppCompatActivity() {
         delete8.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title8", "null")
@@ -397,7 +397,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -405,8 +405,8 @@ class MainActivity : AppCompatActivity() {
         delete9.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title9", "null")
@@ -416,7 +416,7 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
@@ -424,8 +424,8 @@ class MainActivity : AppCompatActivity() {
         delete10.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Question")
-                .setMessage("Are you sure you want to delete this stop?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setMessage(getString(R.string.sureDelete))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     val sp = getSharedPreferences("busStops", Context.MODE_PRIVATE)
                     val e = sp.edit()
                     e.putString("title10", "null")
@@ -435,10 +435,54 @@ class MainActivity : AppCompatActivity() {
                     e.apply()
                     recreate()
                 }
-                .setNegativeButton("No") { dialog, which ->
+                .setNegativeButton(getString(R.string.no)) { dialog, which ->
 
                 }
                 .show()
+        }
+        //endregion
+        //region Edit buttons
+        //region Variable declaration
+        val edit1 = findViewById<Button>(R.id.edit_1)
+        val edit2 = findViewById<Button>(R.id.edit_2)
+        val edit3 = findViewById<Button>(R.id.edit_3)
+        val edit4 = findViewById<Button>(R.id.edit_4)
+        val edit5 = findViewById<Button>(R.id.edit_5)
+        val edit6 = findViewById<Button>(R.id.edit_6)
+        val edit7 = findViewById<Button>(R.id.edit_7)
+        val edit8 = findViewById<Button>(R.id.edit_8)
+        val edit9 = findViewById<Button>(R.id.edit_9)
+        val edit10 = findViewById<Button>(R.id.edit_10)
+        //endregion
+        edit1.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 1))
+        }
+        edit2.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 2))
+        }
+        edit3.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 3))
+        }
+        edit4.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 4))
+        }
+        edit5.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 5))
+        }
+        edit6.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 6))
+        }
+        edit7.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 7))
+        }
+        edit8.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 8))
+        }
+        edit9.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 9))
+        }
+        edit10.setOnClickListener {
+            startActivity(Intent(this, EditBusStopActivity::class.java).putExtra("slot", 10))
         }
         //endregion
         //region Check buttons
@@ -458,52 +502,52 @@ class MainActivity : AppCompatActivity() {
         check1.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode1", "null") + " " + sp.getString("routeNumber1", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check2.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode2", "null") + " " + sp.getString("routeNumber2", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check3.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode3", "null") + " " + sp.getString("routeNumber3", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check4.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode4", "null") + " " + sp.getString("routeNumber4", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check5.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode5", "null") + " " + sp.getString("routeNumber5", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check6.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode6", "null") + " " + sp.getString("routeNumber6", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check7.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode7", "null") + " " + sp.getString("routeNumber7", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check8.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode8", "null") + " " + sp.getString("routeNumber8", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check9.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode9", "null") + " " + sp.getString("routeNumber9", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         check10.setOnClickListener {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, sp.getString("stopCode10", "null") + " " + sp.getString("routeNumber10", "null"), null, null)
-            Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         //endregion
         }
