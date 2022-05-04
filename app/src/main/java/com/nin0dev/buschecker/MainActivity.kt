@@ -8,6 +8,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.telephony.SmsManager
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View.GONE
 import android.widget.Button
 import android.widget.EditText
@@ -40,6 +41,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu) : Boolean {
         menuInflater.inflate(R.menu.appbar_main, menu)
         return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            R.id.addBusStop -> {
+                startActivity(Intent(this, AddBusStopActivity::class.java))
+                finish()
+                return true
+            }
+            else ->
+                return super.onOptionsItemSelected(item)
+        }
     }
     @SuppressLint("SetTextI18n")
     fun cards()
