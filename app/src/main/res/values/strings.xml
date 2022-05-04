@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">BusChecker</string>
+    <string name="quickSearchTitle">Quick search</string>
+    <string name="stopCode">Stop code</string>
+    <string name="check">Check</string>
+    <string name="savedStops">Saved bus stops</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="stop">Stop</string>
+    <string name="route">Route</string>
+    <string name="required">Required</string>
+    <string name="invalid">Invalid</string>
+    <string name="wait">Please wait...</string>
+    <string name="question">Question</string>
+    <string name="sureDelete">Are you sure you want to delete this stop?</string>
+    <string name="noStops">No saved bus stops, click the + to add one</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

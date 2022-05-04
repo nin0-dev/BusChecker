@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BusChecker</string>
+    <string name="quickSearchTitle">Recherche rapide</string>
+    <string name="stopCode">Code d\'arrêt</string>
+    <string name="check">Vérifier</string>
+    <string name="savedStops">Arrêts enregistrés</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="stop">Arrêt</string>
+    <string name="route">Ligne</string>
+    <string name="required">Obligatoire</string>
+    <string name="invalid">Invalide</string>
+    <string name="wait">Veuillez patienter...</string>
+    <string name="question">Question</string>
+    <string name="sureDelete">Est-ce que vous voulez vraiment supprimer cet arrêt?</string>
+    <string name="noStops">Pas d\'arrêts de bus sauvegardés, appuyez sur le + pour en ajouter</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+</resources>
