@@ -227,10 +227,14 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Required"
                 return@setOnClickListener
             }
-
+            if(textView.text.length != 5)
+            {
+                findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = "Invalid"
+                return@setOnClickListener
+            }
+            findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = ""
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage("52786", null, textView.text.toString(), null, null)
-            findViewById<TextInputLayout>(R.id.quicksearch_textlayout).error = ""
             textView.setText("")
             Toast.makeText(this, "Please wait...", Toast.LENGTH_SHORT).show()
             recreate()
