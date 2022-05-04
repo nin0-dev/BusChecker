@@ -18,9 +18,12 @@
         android:theme="@style/Theme.BusChecker"
         tools:targetApi="32">
         <activity
+            android:name=".AddBusStopActivity"
+            android:exported="false" />
+        <activity
             android:name=".MultiChoiceDialog"
-            android:theme="@style/Theme.Transparent"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.Transparent" />
         <activity
             android:name=".ShowDIalogActivity"
             android:exported="true"
