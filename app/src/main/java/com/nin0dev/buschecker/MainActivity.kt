@@ -50,6 +50,11 @@ class MainActivity : AppCompatActivity() {
                 finish()
                 return true
             }
+            R.id.about_menu -> {
+                startActivity(Intent(this, AboutActivity::class.java))
+                finish()
+                return true
+            }
             else ->
                 return super.onOptionsItemSelected(item)
         }
