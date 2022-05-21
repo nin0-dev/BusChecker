@@ -8,4 +8,8 @@
         android:iconTintMode="multiply"
         android:title="Add bus stop"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/about_menu"
+        android:title="@string/about"
+        app:showAsAction="never" />
 </menu>
