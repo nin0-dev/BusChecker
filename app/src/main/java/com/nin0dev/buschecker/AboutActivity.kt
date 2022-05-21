@@ -2,10 +2,12 @@ package com.nin0dev.buschecker
 
 import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.color.DynamicColors
 
@@ -14,6 +16,7 @@ class AboutActivity : AppCompatActivity() {
         DynamicColors.applyIfAvailable(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
+        buttons()
         supportActionBar?.setTitle(getString(R.string.about))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
@@ -74,5 +77,34 @@ class AboutActivity : AppCompatActivity() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
         super.onBackPressed()
+    }
+    fun buttons()
+    {
+        val supportButton = findViewById<Button>(R.id.supportButton)
+        val contactButton = findViewById<Button>(R.id.contactButton)
+        val privacyButton = findViewById<Button>(R.id.privacyButton)
+        val licenseButton = findViewById<Button>(R.id.licenseButton)
+        val sourceCodeButton = findViewById<Button>(R.id.sourceCodeButton)
+
+        supportButton.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/+UoN55-vB0MxjNzlh"))
+            startActivity(myIntent)
+        }
+        contactButton.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("mailto:nin0dev.apps+buschecker@gmail.com"))
+            startActivity(myIntent)
+        }
+        privacyButton.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker/blob/master/PRIVACY.md"))
+            startActivity(myIntent)
+        }
+        licenseButton.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker/blob/master/LICENSE"))
+            startActivity(myIntent)
+        }
+        sourceCodeButton.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker"))
+            startActivity(myIntent)
+        }
     }
 }
