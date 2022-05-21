@@ -45,4 +45,13 @@
     <string name="makeSureStopCode">Make sure that you entered the right stop code, and try again.</string>
     <string name="invalidRouteNumber">Invalid route number</string>
     <string name="makeSureRouteNumber">Make sure that you entered the right route number, and try again.</string>
+    <string name="changelog">1.0:\nInitial release</string>
+    <string name="madewithlove">Made with ❤ by nin0dev</string>
+    <string name="support">Support</string>
+    <string name="contact">Contact</string>
+    <string name="privacy">Privacy</string>
+    <string name="license">License</string>
+    <string name="source_code">Source code</string>
+    <string name="changelog_title">Changelog</string>
+    <string name="about">About</string>
 </resources>
