@@ -12,7 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >#E8E8E8</item>
         <item name="android:windowLightStatusBar" >true</item>
-        <item name="android:navigationBarColor" >#E8E8E8</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow.Icon</item>
         <item name="android:windowLightNavigationBar" >true</item>
         <!-- Customize your theme here. -->
     </style>
@@ -23,5 +23,8 @@
         <item name="android:windowContentOverlay">@null</item>
 
         <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="ActionButton.Overflow.Icon" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_more_vert_24</item>
     </style>
 </resources>

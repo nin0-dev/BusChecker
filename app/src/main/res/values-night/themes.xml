@@ -13,7 +13,9 @@
         <item name="android:statusBarColor" >#2E2E2E</item>
         <item name="android:windowLightStatusBar" >false</item>
         <item name="android:navigationBarColor" >#2E2E2E</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow.Icon</item>
         <item name="android:windowLightNavigationBar" >false</item>
         <!-- Customize your theme here. -->
+
     </style>
 </resources>
