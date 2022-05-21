@@ -2,7 +2,7 @@
 ### What is stored on BusChecker servers
 Nothing.
 ### What may be stored on 3rd-party servers
-Any stop code or route number that you request through the app.
+Your phone number, and any stop code or route number that you request through the app.
 ### What is stored locally
 Any stop code, route number and name that you added. Any other setting is also stored on your device.
 ### Clear data
