@@ -24,6 +24,7 @@ class SMSReceiver : BroadcastReceiver() {
     val pdu_type = "pdus"
 
 
+    @Suppress("VARIABLE_WITH_REDUNDANT_INITIALIZER")
     override fun onReceive(context: Context, intent: Intent) {
         val bundle = intent.extras
         val msgs: Array<SmsMessage?>
@@ -50,9 +51,19 @@ class SMSReceiver : BroadcastReceiver() {
             val regexInvalid2 = Regex("Invalid stop number")
             val regexInvalidRoute = Regex("doesn\\'t correspond with stop")
             val regexApproximateMatch = Regex("Several bus routes are available for stop")
+            val faceCoveringWarnMatch = Regex("Wearing a face-covering")
             if(regexTimeInfo.containsMatchIn(text!!))
             {
-                var stopNumber = text.substring(5, 11)
+                var stopNumber = ""
+                if(faceCoveringWarnMatch.containsMatchIn(text!!))
+                {
+                    stopNumber = text.removeRange(0, 101)
+                    stopNumber = stopNumber.substring(5, 11)
+                }
+                else
+                {
+                    stopNumber = text.substring(5, 11)
+                }
                 var busTimes = text.substringAfter(":")
                 busTimes = busTimes.removeRange(0,1)
                 busTimes = busTimes.substringBefore("\n")
@@ -90,7 +101,7 @@ class SMSReceiver : BroadcastReceiver() {
             if(regexApproximateMatch.containsMatchIn(text))
             {
                 var stopNumber = text.substringBefore(".")
-                stopNumber = stopNumber.substring(stopNumber.length - 5)
+                stopNumber = stopNumber.substring(stopNumber.length - 6)
                 var routeNumbers = text.substringAfter(":")
                 routeNumbers = routeNumbers.substringBefore(".")
                 routeNumbers.removeRange(0, 1)
