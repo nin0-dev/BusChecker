@@ -2,9 +2,41 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Accueil - BusChecker</title>
+	<script src="index.js"></script>
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed"> <!--  App bar -->
+		<div class="mdc-top-app-bar__row"> 
+		  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"> <!--  App bar title -->
+			<span class="mdc-top-app-bar__title">BusChecker</span>
+		  </section>
+		  <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar"> <!--  App bar buttons -->
+			<button class="mdc-button main-appbar-button mdc-button--icon-leading"> <!--  Contact button -->
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon text-button" aria-hidden="true">mail</i>
+				<span class="mdc-button__label text-button">Contact</span>
+			</button>
+			<button class="mdc-button main-appbar-button mdc-button--icon-leading"> <!--  Support button -->
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon text-button" aria-hidden="true">question_answer</i>
+				<span class="mdc-button__label text-button">Aide</span>
+			</button>
+			<button class="mdc-button mdc-button--raised main-appbar-button appbar-contained-button mdc-button--icon-leading"> <!--  Download button -->
+				<span class="mdc-button__ripple"></span>
+				<i class="material-icons mdc-button__icon" aria-hidden="true">download</i>
+				<span class="mdc-button__label">Télécharger</span>
+			</button>
+		  </section>
+		</div>
+	  </header>
+	  <main class="mdc-top-app-bar--fixed-adjust">
+		
+	  </main>
 </body>
 </html>
