@@ -22,29 +22,34 @@
     width: 350px;
 }
 
-#policy {
+.policy {
     margin: 50px;
 }
 
-#appbar-title-mobile
-{
+#appbar-title-mobile {
     font-size: large;
     margin-left: 20px;
     color: black;
 }
+
 #mobile-navbar {
     display: block;
 }
-#pc-navbar
-{
+
+#pc-navbar {
     display: none;
 }
+
 @media (max-resolution: 1dppx) {
     #mobile-navbar {
         display: none;
     }
-    #pc-navbar
-    {
+
+    #pc-navbar {
         display: block;
     }
+}
+
+#license {
+    font-family: "Roboto Mono";
 }
