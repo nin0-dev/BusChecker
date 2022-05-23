@@ -25,3 +25,10 @@
 #policy {
     margin: 50px;
 }
+
+#appbar-title-mobile
+{
+    font-size: large;
+    margin-left: 20px;
+    color: black;
+}
