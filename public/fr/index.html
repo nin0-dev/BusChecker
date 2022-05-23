@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Accueil - BusChecker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<script src="index.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+	<div class="navbar-fixed" id="pc-navbar">
+		<nav>
+			<!-- App bar-->
+			<div class="nav-wrapper deep-purple lighten-5">
+				<a href="index.html" class="brand-logo">
+					<img src="images/logo.png" id="appbar-logo" alt="BusChecker logo" />
+				</a>
+				<span id="appbar-title">BusChecker</span>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<a class="waves-effect waves-light btn-flat" href="help.html">
+						<i class="material-icons left">live_help</i>
+						Assistance
+					</a>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="navbar-fixed" id="mobile-navbar">
+		<nav>
+			<!-- App bar-->
+			<div class="nav-wrapper deep-purple lighten-5 ">
+				<a href="index.html">
+					<span id="appbar-title-mobile">BusChecker</span>
+				</a>
+				
+				<ul id="nav-mobile" class="right hide-on-med">
+					<a class="waves-effect waves-light btn-flat mobile-navbar-button" href="help.html">
+						<span class="material-icons">live_help</span>
+					</a>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="section">
+		<!-- Main section -->
+		<div class="container">
+			<br><br>
+			<h1 class="header center-align">BusChecker</h1>
+			<div class="row center-align">
+				<h5 class="header col s12">
+					Vérifiez les horaires de bus de la STM, sans Internet.
+				</h5>
+			</div>
+			<div class="row center-align">
+				<a href="download.html"
+					class="btn-large waves-effect waves-light deep-purple darken-1" target="_blank"
+					rel="noopener noreferrer">
+					<i class="material-icons left">download</i>
+					Télécharger
+				</a>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	<div class="container">
+		<div class="section">
+			<!-- Advantages section -->
+			<div class="row">
+				<div class="col s12 m4">
+					<h2 class="center-align">
+						<i class="medium material-icons">cloud_off</i>
+					</h2>
+					<h5 class="center-align">Fonctionne hors ligne</h5>
+
+					<p>
+						BusChecker utilise le service STM SMS, qui permet d'obtenir les horaires du bus sans Internet.
+						Vous avez seulement besoin d'un forfait SMS!
+					</p>
+				</div>
+
+				<div class="col s12 m4">
+					<h2 class="center-align">
+						<i class="medium material-icons">star</i>
+					</h2>
+					<h5 class="center-align">Enregistrez vos arrêts de bus</h5>
+
+					<p>
+						Au lieu d'enter le code d'arrêt à chaque fois, BusChecker vous permet de sauvegarder vos arrêts
+						de bus préférés et de connaître leur horaire en un clic.
+					</p>
+				</div>
+
+				<div class="col s12 m4">
+					<h2 class="center-align">
+						<i class="medium material-icons">search</i>
+					</h2>
+					<h5 class="center-align">Nouvel arrêt de bus?</h5>
+
+					<p>
+						Pas d'inquiétude. Avec la recherche rapide de BusChecker, vous avez juste à entrer le code
+						d'arrêt et vous aurez les horaires.
+					</p>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<div class="container">
+		<div class="section">
+			<!-- Screenshots section -->
+			<div class="row">
+				<div class="col s12 m4">
+					<img class="screenshot" src="images/offline_screenshot.png" alt="BusChecker works offline" />
+				</div>
+
+				<div class="col s12 m4">
+					<img class="screenshot" src="images/saved_screenshot.png" alt="Save your favorite bus stops" />
+				</div>
+
+				<div class="col s12 m4">
+					<img class="screenshot" src="images/quicksearch_screenshot.png"
+						alt="Use Quick search to find bus stop times" />
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<footer class="page-footer deep-purple lighten-5">
+		<div class="container">
+		  <div class="row">
+			<div class="col l6 s12">
+			  <h5 class="black-text">Fait avec &#10084;&#65039; par nin0dev</h5>
+			</div>
+			<div class="col l4 offset-l2 s12">
+			  <h5 class="black-text">Liens utiles</h5>
+			  <ul>
+				<li><a class="black-text" href="privacy.html">Confidentialité</a></li>
+				<li><a class="black-text" href="license.html">Licence</a></li>
+				<li><a class="black-text" href="https://github.com/nin0-dev/BusChecker">Code source</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+		<div class="footer-copyright">
+		  <div class="container black-text">
+		  © 2022 nin0dev
+		  </div>
+		</div>
+	  </footer>
+	<script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/js/materialize.min.js"></script>
+</body>
+
+</html>
