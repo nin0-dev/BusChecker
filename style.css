@@ -10,5 +10,11 @@
 
 #appbar-title {
     font-size: large;
-    margin-left: 75px;
+    margin-left: 80px;
+    color: black;
+}
+
+.filled-button-content
+{
+    color: black;
 }
