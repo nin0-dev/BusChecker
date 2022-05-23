@@ -34,7 +34,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="10dp"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                             android:layout_marginHorizontal="30dp"
                             android:layout_marginTop="20dp"
                             android:layout_marginBottom="15dp"
-                            android:text="Update available"
+                            android:text="@string/update_available"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                         <LinearLayout
@@ -64,7 +64,7 @@
                                 android:layout_marginStart="30dp"
                                 android:layout_marginTop="0dp"
                                 android:layout_marginBottom="20dp"
-                                android:text="Download"
+                                android:text="@string/download"
                                 tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
                         </LinearLayout>

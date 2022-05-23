@@ -54,4 +54,6 @@
     <string name="source_code">Source code</string>
     <string name="changelog_title">Changelog</string>
     <string name="about">About</string>
+    <string name="update_available">Update available</string>
+    <string name="download">Download</string>
 </resources>
