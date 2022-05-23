@@ -1,1 +1,0 @@
-const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
