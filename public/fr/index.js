@@ -1,6 +1,6 @@
 function download1_0() {
     const el = document.createElement('iframe');
-    el.setAttribute('src', 'https://appcenter-filemanagement-distrib1ede6f06e.azureedge.net/89408ef6-7a68-48cf-9d43-51c89c13161d/BusChecker-1.0.apk?sv=2019-02-02&sr=c&sig=nETSRkB0y%2BVWBSBmHMrG%2FHqQQQe3fm07ZuwPzjmEhT8%3D&se=2022-05-24T23%3A20%3A34Z&sp=r');
+    el.setAttribute('src', 'https://appcenter-filemanagement-distrib5ede6f06e.azureedge.net/cf869e6a-a3f7-4947-8f79-f9a6dc3d5a88/app-release.apk?sv=2019-02-02&sr=c&sig=3uigvkYydIkchG3x%2Bt6t7S%2BPylaSV0Tgq5f0BtgZHGQ%3D&se=2022-05-24T23%3A36%3A21Z&sp=r');
     el.style.display = "none";
     document.getElementById('body').appendChild(el);
     setTimeout(function () {
