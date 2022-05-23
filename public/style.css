@@ -32,3 +32,19 @@
     margin-left: 20px;
     color: black;
 }
+#mobile-navbar {
+    display: block;
+}
+#pc-navbar
+{
+    display: none;
+}
+@media (max-resolution: 1dppx) {
+    #mobile-navbar {
+        display: none;
+    }
+    #pc-navbar
+    {
+        display: block;
+    }
+}
