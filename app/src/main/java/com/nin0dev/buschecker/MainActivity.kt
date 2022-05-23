@@ -5,11 +5,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.telephony.SmsManager
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -17,6 +19,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.google.android.material.card.MaterialCardView
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
@@ -36,8 +43,26 @@ class MainActivity : AppCompatActivity() {
             val i = Intent(this, SetupActivity::class.java)
             startActivity(i)
         }
+        checkUpdates()
         buttons()
         cards()
+    }
+    fun checkUpdates()
+    {
+        val queue = Volley.newRequestQueue(this)
+        val updateIndicator = findViewById<MaterialCardView>(R.id.update_card)
+        val url = "https://buschecker-app.web.app/buschecker_ota.txt"
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            { response ->
+                if(response != "1.0")
+                {
+                    updateIndicator.visibility = VISIBLE
+                }
+            },
+            { })
+        stringRequest.setShouldCache(false);
+        queue.add(stringRequest)
     }
     override fun onCreateOptionsMenu(menu: Menu) : Boolean {
         menuInflater.inflate(R.menu.appbar_main, menu)
@@ -555,5 +580,19 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, getString(R.string.wait), Toast.LENGTH_SHORT).show()
         }
         //endregion
+        val updateButton = findViewById<Button>(R.id.update_button)
+        updateButton.setOnClickListener {
+            if(getString(R.string.quickSearchTitle) == "Recherche rapide")
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/fr/download.html"))
+                startActivity(myIntent)
+            }
+            else
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/en/download.html"))
+                startActivity(myIntent)
+            }
         }
+        }
+
 }
