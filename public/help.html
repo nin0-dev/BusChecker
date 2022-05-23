@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Accueil - BusChecker</title>
+    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div class="navbar-fixed" id="pc-navbar">
+        <nav>
+            <!-- App bar-->
+            <div class="nav-wrapper deep-purple lighten-5">
+                <a href="index.html" class="brand-logo">
+                    <img src="images/logo.png" id="appbar-logo" alt="BusChecker logo" />
+                </a>
+                <span id="appbar-title">BusChecker</span>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <a class="waves-effect waves-light btn-flat">
+                        <i class="material-icons left">live_help</i>
+                        Assistance
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="navbar-fixed" id="mobile-navbar">
+        <nav>
+            <!-- App bar-->
+            <div class="nav-wrapper deep-purple lighten-5">
+                <a href="index.html">
+                    <span id="appbar-title-mobile">BusChecker</span>
+                </a>
+
+                <ul id="nav-mobile" class="right">
+                    <a class="waves-effect waves-light btn-flat">
+                        <span class="material-icons">live_help</span>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="section">
+        <!-- Main section -->
+        <div class="container">
+            <br><br>
+            <h1 class="header center-align">Assistance</h1>
+            <br><br>
+        </div>
+    </div>
+    <div class="container" id="policy">
+        <div class="section">
+            
+            <div class="row">
+                <h5>Foire aux questions</h5>
+                <p class="faq_question">Est-ce que cette appli va sortir sur iPhone?</p>
+                <p>Non, car l'accès aux SMS, dont BusChecker a besoin, est limité à l'appli Messages. Par contre, vous pouvez utiliser l'appli <a href="https://apps.apple.com/ca/app/chrono-bus-m%C3%A9tro-et-train/id1261397728?l=fr">Chrono</a>.</p>
+                <p class="faq_question">Où puis-je trouver le code d'arrêt ou le numéro de ligne?</p>
+                <img src="images/stop_route.jpg" style="width: 300px;"/>
+                <p class="faq_question">L'appli est géniale! Puis-je faire un don?</p>
+                <p>Oui! Vous pouvez faire un virement Interac:</br><span id="license">Courriel: nin0dev.apps@gmail.com</br>Réponse à la question secrète: BusChecker</span></p>
+                <p class="faq_question">J'ai trouvé un problème. Où puis-je le signaler?</p>
+                <p><a href="mailto:nin0dev.apps+buschecker@gmail.com?subject=Signalement%20de%20bogue%20(NE%20PAS%20MODIFIER)">Cliquez ici pour envoyer un courriel et signaler le bogue.</a></p>
+                <p class="faq_question">Où puis-je demander une nouvelle fonctionnalité?</p>
+                <p><a href="mailto:nin0dev.apps+buschecker@gmail.com?subject=Demande$20de%20nouvelle%20fonction%20(NE%20PAS%20MODIFIER)">Cliquez ici pour envoyer un courriel et faire la demande de fonctionnalité.</a></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    </div>
+    <footer class="page-footer deep-purple lighten-5">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="black-text">Fait avec &#10084;&#65039; par nin0dev</h5>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="black-text">Liens utiles</h5>
+                    <ul>
+                        <li><a class="black-text" href="privacy.html">Confidentialité</a></li>
+                        <li><a class="black-text" href="license.html">Licence</a></li>
+                        <li><a class="black-text" href="https://github.com/nin0-dev/BusChecker">Code source</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container black-text">
+                © 2022 nin0dev
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@1.1.0/dist/js/materialize.min.js"></script>
+</body>
+
+</html>
