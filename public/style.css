@@ -14,12 +14,14 @@
     color: black;
 }
 
-.filled-button-content
-{
+.filled-button-content {
     color: black;
 }
 
-.screenshot
-{
+.screenshot {
     width: 350px;
+}
+
+#policy {
+    margin: 50px;
 }
