@@ -1,0 +1,63 @@
+* {
+    font-family: Roboto;
+}
+
+#appbar-logo {
+    width: 9%;
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+#appbar-title {
+    font-size: large;
+    margin-left: 80px;
+    color: black;
+}
+
+.filled-button-content {
+    color: black;
+}
+
+.screenshot {
+    width: 350px;
+}
+
+.policy {
+    margin: 50px;
+}
+
+#appbar-title-mobile {
+    font-size: large;
+    margin-left: 20px;
+    color: black;
+}
+
+#mobile-navbar {
+    display: block;
+}
+
+#pc-navbar {
+    display: none;
+}
+
+@media (max-resolution: 1dppx) {
+    #mobile-navbar {
+        display: none;
+    }
+
+    #pc-navbar {
+        display: block;
+    }
+}
+
+#license {
+    font-family: "Roboto Mono";
+}
+
+.faq_question {
+    font-weight: bold;
+}
+
+.chip-release {
+    margin-left: 10px;
+}
