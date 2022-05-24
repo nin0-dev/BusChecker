@@ -54,7 +54,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:text="@string/support"
-                        app:icon="@drawable/ic_baseline_question_answer_24" />
+                        app:icon="@drawable/ic_baseline_live_help_24" />
 
                     <Button
                         android:id="@+id/contactButton"
@@ -63,8 +63,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
-                        android:text="@string/contact"
-                        app:icon="@drawable/ic_baseline_email_24" />
+                        android:text="@string/website"
+                        app:icon="@drawable/ic_baseline_web_24" />
 
                 </LinearLayout>
 

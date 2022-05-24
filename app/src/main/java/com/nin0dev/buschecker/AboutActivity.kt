@@ -87,20 +87,44 @@ class AboutActivity : AppCompatActivity() {
         val sourceCodeButton = findViewById<Button>(R.id.sourceCodeButton)
 
         supportButton.setOnClickListener {
-            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/+UoN55-vB0MxjNzlh"))
-            startActivity(myIntent)
+            if(getString(R.string.quickSearchTitle) == "Recherche rapide")
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/fr/help.html"))
+                startActivity(myIntent)
+            }
+            else
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/en/help.html"))
+                startActivity(myIntent)
+            }
         }
         contactButton.setOnClickListener {
-            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("mailto:nin0dev.apps+buschecker@gmail.com"))
+            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app"))
             startActivity(myIntent)
         }
         privacyButton.setOnClickListener {
-            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker/blob/master/PRIVACY.md"))
-            startActivity(myIntent)
+            if(getString(R.string.quickSearchTitle) == "Recherche rapide")
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/fr/privacy.html"))
+                startActivity(myIntent)
+            }
+            else
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/en/privacy.html"))
+                startActivity(myIntent)
+            }
         }
         licenseButton.setOnClickListener {
-            val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker/blob/master/LICENSE"))
-            startActivity(myIntent)
+            if(getString(R.string.quickSearchTitle) == "Recherche rapide")
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/fr/license.html"))
+                startActivity(myIntent)
+            }
+            else
+            {
+                val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buschecker-app.web.app/en/license.html"))
+                startActivity(myIntent)
+            }
         }
         sourceCodeButton.setOnClickListener {
             val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/nin0-dev/BusChecker"))
