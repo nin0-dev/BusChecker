@@ -3,9 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Accueil - BusChecker</title>
+    <title>BusChecker</title>
     <script src="index.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const appcenter_url = urlParams.get('appcenter_url')
+        console.log(appcenter_url)
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const el = document.createElement('iframe');
+            el.setAttribute('src', appcenter_url);
+            el.style.display = "none";
+            document.getElementById('body').appendChild(el);
+        })
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Roboto" rel="stylesheet">
     <link rel="stylesheet"
@@ -32,21 +44,21 @@
         </nav>
     </div>
     <div class="navbar-fixed" id="mobile-navbar">
-		<nav>
-			<!-- App bar-->
-			<div class="nav-wrapper deep-purple lighten-5">
-				<a href="index.html">
-					<span id="appbar-title-mobile">BusChecker</span>
-				</a>
-				
-				<ul id="nav-mobile" class="right">
-					<a class="waves-effect waves-light btn-flat" href="help.html"> 
-						<span class="material-icons">live_help</span>
-					</a>
-				</ul>
-			</div>
-		</nav>
-	</div>
+        <nav>
+            <!-- App bar-->
+            <div class="nav-wrapper deep-purple lighten-5">
+                <a href="index.html">
+                    <span id="appbar-title-mobile">BusChecker</span>
+                </a>
+
+                <ul id="nav-mobile" class="right">
+                    <a class="waves-effect waves-light btn-flat" href="help.html">
+                        <span class="material-icons">live_help</span>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="section">
         <!-- Main section -->
         <div class="container">
